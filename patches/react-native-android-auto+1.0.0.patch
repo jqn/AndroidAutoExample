@@ -1,5 +1,5 @@
 diff --git a/node_modules/react-native-android-auto/android/build.gradle b/node_modules/react-native-android-auto/android/build.gradle
-index ff296fb..d9fe5c9 100644
+index ff296fb..e7a3849 100644
 --- a/node_modules/react-native-android-auto/android/build.gradle
 +++ b/node_modules/react-native-android-auto/android/build.gradle
 @@ -54,7 +54,7 @@ android {
@@ -11,17 +11,22 @@ index ff296fb..d9fe5c9 100644
          sourceCompatibility JavaVersion.VERSION_1_8
      }
  }
-diff --git a/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/results.bin b/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/results.bin
-new file mode 100644
-index 0000000..0d259dd
---- /dev/null
-+++ b/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/results.bin
-@@ -0,0 +1 @@
-+o/classes
-diff --git a/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/transformed/classes/classes.dex b/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/transformed/classes/classes.dex
-new file mode 100644
-index 0000000..d11ac8c
-Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/2667b96a1400c617ee86987f6e08d342/transformed/classes/classes.dex differ
+@@ -72,12 +72,14 @@ repositories {
+     }
+     google()
+     jcenter()
++    mavenCentral()
+ }
+ 
+ dependencies {
+     //noinspection GradleDynamicVersion
+     implementation 'com.facebook.react:react-native:+'  // From node_modules
+-    implementation "com.google.android.libraries.car:car-app:1.0.0-beta.+"
++    implementation "androidx.car.app:app:1.0.0"
++    implementation "androidx.activity:activity:1.3.0"
+ }
+ 
+ def configureReactNativePom(def pom) {
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/6f07cf4bdb1f989fa4153a88d5b27920/results.bin b/node_modules/react-native-android-auto/android/build/.transforms/6f07cf4bdb1f989fa4153a88d5b27920/results.bin
 new file mode 100644
 index 0000000..1ed65e0
@@ -38,11 +43,11 @@ index 0000000..5ff383e
 +o/debug
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.dex
 new file mode 100644
-index 0000000..4e1e271
+index 0000000..95367b5
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule.dex
 new file mode 100644
-index 0000000..0e657de
+index 0000000..8a6e2ad
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoModule.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoPackage.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/AndroidAutoPackage.dex
 new file mode 100644
@@ -54,15 +59,19 @@ index 0000000..4ea6ff3
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/BuildConfig.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarScreen.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarScreen.dex
 new file mode 100644
-index 0000000..8dc8e59
+index 0000000..26b3ea1
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarScreen.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$1.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$1.dex
 new file mode 100644
-index 0000000..00213f4
+index 0000000..a1c1934
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$1.dex differ
+diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$2.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$2.dex
+new file mode 100644
+index 0000000..4942539
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService$2.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService.dex
 new file mode 100644
-index 0000000..fd99617
+index 0000000..d0c7d64
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/CarService.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/ReactCarRenderContext.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/ReactCarRenderContext.dex
 new file mode 100644
@@ -70,23 +79,12 @@ index 0000000..309ed31
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/ReactCarRenderContext.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/TemplateParser.dex b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/TemplateParser.dex
 new file mode 100644
-index 0000000..eeb4671
+index 0000000..abb6975
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/debug/com/shopify/rnandroidauto/TemplateParser.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/desugar_graph.bin b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/desugar_graph.bin
 new file mode 100644
 index 0000000..601f245
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/8a60a9cb0b1d759a7985e77ee2d430bd/transformed/desugar_graph.bin differ
-diff --git a/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/results.bin b/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/results.bin
-new file mode 100644
-index 0000000..0d259dd
---- /dev/null
-+++ b/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/results.bin
-@@ -0,0 +1 @@
-+o/classes
-diff --git a/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/transformed/classes/classes.dex b/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/transformed/classes/classes.dex
-new file mode 100644
-index 0000000..ae5a9fd
-Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/.transforms/bd384f8f2a4ba59f7cb34644f84d9e47/transformed/classes/classes.dex differ
 diff --git a/node_modules/react-native-android-auto/android/build/generated/source/buildConfig/debug/com/shopify/rnandroidauto/BuildConfig.java b/node_modules/react-native-android-auto/android/build/generated/source/buildConfig/debug/com/shopify/rnandroidauto/BuildConfig.java
 new file mode 100644
 index 0000000..0dda536
@@ -142,6 +140,10 @@ index 0000000..40e7f24
 +  ]
 +}
 \ No newline at end of file
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/aar_main_jar/debug/classes.jar b/node_modules/react-native-android-auto/android/build/intermediates/aar_main_jar/debug/classes.jar
+new file mode 100644
+index 0000000..400da86
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/aar_main_jar/debug/classes.jar differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/aar_metadata/debug/aar-metadata.properties b/node_modules/react-native-android-auto/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
 new file mode 100644
 index 0000000..d8560bd
@@ -158,20 +160,23 @@ index 0000000..9e26dfe
 @@ -0,0 +1 @@
 +{}
 \ No newline at end of file
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/annotations_typedef_file/debug/typedefs.txt b/node_modules/react-native-android-auto/android/build/intermediates/annotations_typedef_file/debug/typedefs.txt
+new file mode 100644
+index 0000000..e69de29
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/compile_library_classes_jar/debug/classes.jar b/node_modules/react-native-android-auto/android/build/intermediates/compile_library_classes_jar/debug/classes.jar
 new file mode 100644
-index 0000000..ee423cc
+index 0000000..be5e83e
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/compile_library_classes_jar/debug/classes.jar differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/compile_r_class_jar/debug/R.jar b/node_modules/react-native-android-auto/android/build/intermediates/compile_r_class_jar/debug/R.jar
 new file mode 100644
-index 0000000..377b127
+index 0000000..c0205e1
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/compile_r_class_jar/debug/R.jar differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/compile_symbol_list/debug/R.txt b/node_modules/react-native-android-auto/android/build/intermediates/compile_symbol_list/debug/R.txt
 new file mode 100644
-index 0000000..e2414a6
+index 0000000..6b92c2d
 --- /dev/null
 +++ b/node_modules/react-native-android-auto/android/build/intermediates/compile_symbol_list/debug/R.txt
-@@ -0,0 +1,1862 @@
+@@ -0,0 +1,1866 @@
 +int anim abc_fade_in 0x0
 +int anim abc_fade_out 0x0
 +int anim abc_grow_fade_in_from_bottom 0x0
@@ -190,6 +195,7 @@ index 0000000..e2414a6
 +int anim catalyst_push_up_out 0x0
 +int anim catalyst_slide_down 0x0
 +int anim catalyst_slide_up 0x0
++int array hosts_allowlist_sample 0x0
 +int attr actionBarDivider 0x0
 +int attr actionBarItemBackground 0x0
 +int attr actionBarPopupTheme 0x0
@@ -985,6 +991,9 @@ index 0000000..e2414a6
 +int id up 0x0
 +int id view_tag_instance_handle 0x0
 +int id view_tag_native_id 0x0
++int id view_tree_lifecycle_owner 0x0
++int id view_tree_saved_state_registry_owner 0x0
++int id view_tree_view_model_store_owner 0x0
 +int id wrap_content 0x0
 +int integer abc_config_activityDefaultDur 0x0
 +int integer abc_config_activityShortDur 0x0
@@ -2034,6 +2043,10 @@ index 0000000..e2414a6
 +int styleable ViewStubCompat_android_inflatedId 1
 +int styleable ViewStubCompat_android_layout 2
 +int xml rn_dev_preferences 0x0
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state b/node_modules/react-native-android-auto/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state
+new file mode 100644
+index 0000000..d5ff387
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/incremental/debug-mergeJavaRes/merge-state differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/react-native-android-auto/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
 new file mode 100644
 index 0000000..f171dbb
@@ -2063,11 +2076,11 @@ index 0000000..848d9ab
 \ No newline at end of file
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties b/node_modules/react-native-android-auto/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
 new file mode 100644
-index 0000000..52f8fce
+index 0000000..cdb96c4
 --- /dev/null
 +++ b/node_modules/react-native-android-auto/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
 @@ -0,0 +1 @@
-+#Sun Dec 05 07:11:24 CET 2021
++#Tue Dec 07 20:05:44 CET 2021
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/incremental/packageDebugResources/merger.xml b/node_modules/react-native-android-auto/android/build/intermediates/incremental/packageDebugResources/merger.xml
 new file mode 100644
 index 0000000..1727fe8
@@ -2079,11 +2092,11 @@ index 0000000..1727fe8
 \ No newline at end of file
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule$1.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule$1.class
 new file mode 100644
-index 0000000..af69d09
+index 0000000..7e294f0
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule$1.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule.class
 new file mode 100644
-index 0000000..109f7d4
+index 0000000..fa04ac5
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoModule.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoPackage.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/AndroidAutoPackage.class
 new file mode 100644
@@ -2095,15 +2108,19 @@ index 0000000..ed84c72
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/BuildConfig.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarScreen.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarScreen.class
 new file mode 100644
-index 0000000..959f987
+index 0000000..80e5c3c
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarScreen.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$1.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$1.class
 new file mode 100644
-index 0000000..944cc1a
+index 0000000..928a289
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$1.class differ
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$2.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$2.class
+new file mode 100644
+index 0000000..0225727
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService$2.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService.class
 new file mode 100644
-index 0000000..48e4a93
+index 0000000..787b37e
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/CarService.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/ReactCarRenderContext.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/ReactCarRenderContext.class
 new file mode 100644
@@ -2111,7 +2128,7 @@ index 0000000..13dbcb8
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/ReactCarRenderContext.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/TemplateParser.class b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/TemplateParser.class
 new file mode 100644
-index 0000000..55f2234
+index 0000000..c345827
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/javac/debug/classes/com/shopify/rnandroidauto/TemplateParser.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/local_only_symbol_list/debug/R-def.txt b/node_modules/react-native-android-auto/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
 new file mode 100644
@@ -2138,6 +2155,10 @@ index 0000000..fdf789a
 +7-->/Users/jqn/mobile/AndroidAutoExample/node_modules/react-native-android-auto/android/src/main/AndroidManifest.xml
 +8
 +9</manifest>
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/merged_java_res/debug/out.jar b/node_modules/react-native-android-auto/android/build/intermediates/merged_java_res/debug/out.jar
+new file mode 100644
+index 0000000..15cb0ec
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/merged_java_res/debug/out.jar differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/node_modules/react-native-android-auto/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
 new file mode 100644
 index 0000000..84351b4
@@ -2187,11 +2208,11 @@ index 0000000..ab7cf90
 \ No newline at end of file
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.class
 new file mode 100644
-index 0000000..af69d09
+index 0000000..7e294f0
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule$1.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule.class
 new file mode 100644
-index 0000000..109f7d4
+index 0000000..fa04ac5
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoModule.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoPackage.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/AndroidAutoPackage.class
 new file mode 100644
@@ -2203,15 +2224,19 @@ index 0000000..ed84c72
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/BuildConfig.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarScreen.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarScreen.class
 new file mode 100644
-index 0000000..959f987
+index 0000000..80e5c3c
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarScreen.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$1.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$1.class
 new file mode 100644
-index 0000000..944cc1a
+index 0000000..928a289
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$1.class differ
+diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$2.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$2.class
+new file mode 100644
+index 0000000..0225727
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService$2.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService.class
 new file mode 100644
-index 0000000..48e4a93
+index 0000000..787b37e
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/CarService.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/ReactCarRenderContext.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/ReactCarRenderContext.class
 new file mode 100644
@@ -2219,18 +2244,14 @@ index 0000000..13dbcb8
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/ReactCarRenderContext.class differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/TemplateParser.class b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/TemplateParser.class
 new file mode 100644
-index 0000000..55f2234
+index 0000000..c345827
 Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_dir/debug/com/shopify/rnandroidauto/TemplateParser.class differ
-diff --git a/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_jar/debug/classes.jar b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_jar/debug/classes.jar
-new file mode 100644
-index 0000000..68e1fb0
-Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/intermediates/runtime_library_classes_jar/debug/classes.jar differ
 diff --git a/node_modules/react-native-android-auto/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/node_modules/react-native-android-auto/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
 new file mode 100644
-index 0000000..b9b524c
+index 0000000..43d8117
 --- /dev/null
 +++ b/node_modules/react-native-android-auto/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
-@@ -0,0 +1,1382 @@
+@@ -0,0 +1,1386 @@
 +com.shopify.rnandroidauto
 +anim abc_fade_in
 +anim abc_fade_out
@@ -2250,6 +2271,7 @@ index 0000000..b9b524c
 +anim catalyst_push_up_out
 +anim catalyst_slide_down
 +anim catalyst_slide_up
++array hosts_allowlist_sample
 +attr actionBarDivider
 +attr actionBarItemBackground
 +attr actionBarPopupTheme
@@ -3045,6 +3067,9 @@ index 0000000..b9b524c
 +id up
 +id view_tag_instance_handle
 +id view_tag_native_id
++id view_tree_lifecycle_owner
++id view_tree_saved_state_registry_owner
++id view_tree_view_model_store_owner
 +id wrap_content
 +integer abc_config_activityDefaultDur
 +integer abc_config_activityShortDur
@@ -3613,6 +3638,10 @@ index 0000000..b9b524c
 +styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 +styleable ViewStubCompat android_id android_inflatedId android_layout
 +xml rn_dev_preferences
+diff --git a/node_modules/react-native-android-auto/android/build/outputs/aar/react-native-android-auto-debug.aar b/node_modules/react-native-android-auto/android/build/outputs/aar/react-native-android-auto-debug.aar
+new file mode 100644
+index 0000000..f26a1bc
+Binary files /dev/null and b/node_modules/react-native-android-auto/android/build/outputs/aar/react-native-android-auto-debug.aar differ
 diff --git a/node_modules/react-native-android-auto/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-android-auto/android/build/outputs/logs/manifest-merger-debug-report.txt
 new file mode 100644
 index 0000000..0a7af3c
@@ -3646,31 +3675,52 @@ index 0000000..0a7af3c
 +		INJECTED from /Users/jqn/mobile/AndroidAutoExample/node_modules/react-native-android-auto/android/src/main/AndroidManifest.xml
 diff --git a/node_modules/react-native-android-auto/android/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt b/node_modules/react-native-android-auto/android/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt
 new file mode 100644
-index 0000000..2358fee
+index 0000000..30729b6
 --- /dev/null
 +++ b/node_modules/react-native-android-auto/android/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt
-@@ -0,0 +1,16 @@
-+com/shopify/rnandroidauto/CarService.java
-+ com.shopify.rnandroidauto.CarService
-+ com.shopify.rnandroidauto.CarService$1
+@@ -0,0 +1,17 @@
++com/shopify/rnandroidauto/AndroidAutoModule.java
++ com.shopify.rnandroidauto.AndroidAutoModule
++ com.shopify.rnandroidauto.AndroidAutoModule$1
 +com/shopify/rnandroidauto/BuildConfig.java
 + com.shopify.rnandroidauto.BuildConfig
 +com/shopify/rnandroidauto/ReactCarRenderContext.java
 + com.shopify.rnandroidauto.ReactCarRenderContext
 +com/shopify/rnandroidauto/AndroidAutoPackage.java
 + com.shopify.rnandroidauto.AndroidAutoPackage
-+com/shopify/rnandroidauto/CarScreen.java
-+ com.shopify.rnandroidauto.CarScreen
-+com/shopify/rnandroidauto/AndroidAutoModule.java
-+ com.shopify.rnandroidauto.AndroidAutoModule
-+ com.shopify.rnandroidauto.AndroidAutoModule$1
++com/shopify/rnandroidauto/CarService.java
++ com.shopify.rnandroidauto.CarService
++ com.shopify.rnandroidauto.CarService$1
++ com.shopify.rnandroidauto.CarService$2
 +com/shopify/rnandroidauto/TemplateParser.java
 + com.shopify.rnandroidauto.TemplateParser
++com/shopify/rnandroidauto/CarScreen.java
++ com.shopify.rnandroidauto.CarScreen
 diff --git a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/AndroidAutoModule.java b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/AndroidAutoModule.java
-index a263fea..0dfb560 100644
+index a263fea..bb13fd6 100644
 --- a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/AndroidAutoModule.java
 +++ b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/AndroidAutoModule.java
-@@ -60,6 +60,7 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
+@@ -15,10 +15,15 @@ import com.facebook.react.bridge.WritableNativeMap;
+ import com.facebook.react.module.annotations.ReactModule;
+ import com.facebook.react.modules.core.DeviceEventManagerModule;
+ import com.facebook.react.modules.debug.DevSettingsModule;
+-import com.google.android.libraries.car.app.CarContext;
+-import com.google.android.libraries.car.app.CarToast;
+-import com.google.android.libraries.car.app.ScreenManager;
+-import com.google.android.libraries.car.app.model.Template;
++//import com.google.android.libraries.car.app.CarContext;
++//import com.google.android.libraries.car.app.CarToast;
++//import com.google.android.libraries.car.app.ScreenManager;
++//import com.google.android.libraries.car.app.model.Template;
++
++import androidx.car.app.CarContext;
++import androidx.car.app.CarToast;
++import androidx.car.app.ScreenManager;
++import androidx.car.app.model.Template;
+ 
+ import java.util.WeakHashMap;
+ 
+@@ -60,6 +65,7 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
          CarScreen screen = getScreen(name);
          if (screen == null) {
              screen = mCurrentCarScreen;
@@ -3678,7 +3728,7 @@ index a263fea..0dfb560 100644
          }
  
          reactCarRenderContext.setEventCallback(callback).setScreenMarker(screen.getMarker());
-@@ -123,16 +124,19 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
+@@ -123,16 +129,19 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
      public void setEventCallback(String name, Callback callback) {
          CarScreen screen = (CarScreen) getScreen(name);
  
@@ -3698,7 +3748,7 @@ index a263fea..0dfb560 100644
          reactCarRenderContext.setEventCallback(callback);
      }
  
-@@ -145,6 +149,7 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
+@@ -145,6 +154,7 @@ public class AndroidAutoModule extends ReactContextBaseJavaModule {
          OnBackPressedCallback callback = new OnBackPressedCallback(true) {
              @Override
              public void handleOnBackPressed() {
@@ -3706,20 +3756,84 @@ index a263fea..0dfb560 100644
                  sendEvent("android_auto:back_button", new WritableNativeMap());
              }
          };
+diff --git a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarScreen.java b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarScreen.java
+index 2bb1e5a..fdcdf9b 100644
+--- a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarScreen.java
++++ b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarScreen.java
+@@ -5,11 +5,17 @@ import android.util.Log;
+ import androidx.annotation.NonNull;
+ 
+ import com.facebook.react.bridge.ReactContext;
+-import com.google.android.libraries.car.app.CarContext;
+-import com.google.android.libraries.car.app.Screen;
+-import com.google.android.libraries.car.app.model.Pane;
+-import com.google.android.libraries.car.app.model.PaneTemplate;
+-import com.google.android.libraries.car.app.model.Template;
++//import com.google.android.libraries.car.app.CarContext;
++//import com.google.android.libraries.car.app.Screen;
++//import com.google.android.libraries.car.app.model.Pane;
++//import com.google.android.libraries.car.app.model.PaneTemplate;
++//import com.google.android.libraries.car.app.model.Template;
++
++import androidx.car.app.CarContext;
++import androidx.car.app.Screen;
++import androidx.car.app.model.Pane;
++import androidx.car.app.model.PaneTemplate;
++import androidx.car.app.model.Template;
+ 
+ public class CarScreen extends Screen {
+     private Template mTemplate;
+@@ -24,13 +30,13 @@ public class CarScreen extends Screen {
+ 
+     @NonNull
+     @Override
+-    public Template getTemplate() {
++    public Template onGetTemplate() {
+         if (mTemplate != null) {
+             return mTemplate;
+         }
+ 
+-        return PaneTemplate.builder(
+-                Pane.builder().setIsLoading(true).build()
++        return new PaneTemplate.Builder(
++                new Pane.Builder().setLoading(true).build()
+         ).setTitle("Shopify Local Delivery").build();
+     }
+ }
 diff --git a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarService.java b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarService.java
-index e912777..8b34474 100644
+index e912777..7589946 100644
 --- a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarService.java
 +++ b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/CarService.java
-@@ -17,7 +17,7 @@ import com.facebook.react.bridge.ReactContext;
+@@ -1,6 +1,7 @@
+ package com.shopify.rnandroidauto;
+ 
+ import android.content.Intent;
++import android.content.pm.ApplicationInfo;
+ import android.os.Bundle;
+ import android.util.Log;
+ 
+@@ -17,11 +18,15 @@ import com.facebook.react.bridge.ReactContext;
  import com.facebook.react.bridge.WritableNativeMap;
  import com.facebook.react.common.LifecycleState;
  import com.facebook.react.modules.appregistry.AppRegistry;
 -import com.facebook.react.modules.core.Timing;
+-import com.google.android.libraries.car.app.CarAppService;
+-import com.google.android.libraries.car.app.Screen;
+-import com.shopify.rnandroidauto.AndroidAutoModule;
+-import com.shopify.rnandroidauto.AndroidAutoPackage;
 +import com.facebook.react.modules.core.TimingModule;
- import com.google.android.libraries.car.app.CarAppService;
- import com.google.android.libraries.car.app.Screen;
- import com.shopify.rnandroidauto.AndroidAutoModule;
-@@ -43,12 +43,12 @@ public final class CarService extends CarAppService {
++//import com.google.android.libraries.car.app.CarAppService;
++//import com.google.android.libraries.car.app.Screen;
++//import com.shopify.rnandroidauto.AndroidAutoModule;
++//import com.shopify.rnandroidauto.AndroidAutoPackage;
++import androidx.car.app.CarAppService;
++import androidx.car.app.Screen;
++import androidx.car.app.Session;
++import androidx.car.app.validation.HostValidator;
+ 
+ public final class CarService extends CarAppService {
+     private ReactInstanceManager mReactInstanceManager;
+@@ -43,12 +48,12 @@ public final class CarService extends CarAppService {
                          .setJSIModulesPackage(null)
                          .setInitialLifecycleState(LifecycleState.BEFORE_CREATE);
  
@@ -3738,7 +3852,73 @@ index e912777..8b34474 100644
  
          builder.addPackage(new AndroidAutoPackage());
  
-@@ -120,7 +120,7 @@ public final class CarService extends CarAppService {
+@@ -59,21 +64,41 @@ public final class CarService extends CarAppService {
+ 
+     @Override
+     @NonNull
+-    public Screen onCreateScreen(@Nullable Intent intent) {
+-        screen = new CarScreen(getCarContext(), mReactInstanceManager.getCurrentReactContext());
+-        screen.setMarker("root");
+-        runJsApplication();
+-
+-        return screen;
++    public Session onCreateSession() {
++        return new Session() {
++            @Override
++            @NonNull
++            public Screen onCreateScreen(@Nullable Intent intent) {
++                screen = new CarScreen(getCarContext(), mReactInstanceManager.getCurrentReactContext());
++                screen.setMarker("root");
++                runJsApplication();
++
++                return screen;
++            }
++        };
+     }
+ 
++    @NonNull
+     @Override
+-    public void onCarAppFinished() {
+-        super.onCarAppFinished();
++    public HostValidator createHostValidator() {
++        if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
++            return HostValidator.ALLOW_ALL_HOSTS_VALIDATOR;
++        } else {
++            return new HostValidator.Builder(getApplicationContext())
++                    .addAllowedHosts(androidx.car.app.R.array.hosts_allowlist_sample)
++                    .build();
++        }
++    }
++
++
++
++//    @Override
++//    public void onCarAppFinished() {
++//        super.onCarAppFinished();
+ 
+         // Should we tear down the app here?
+         // mReactInstanceManager.destroy();
+-    }
++//    }
+ 
+     private void runJsApplication() {
+ //        mReactInstanceManager.getDevSupportManager().setHotModuleReplacementEnabled(false);
+@@ -94,10 +119,10 @@ public final class CarService extends CarAppService {
+         }
+     }
+ 
+-    @Override
+-    public void onNewIntent(@NonNull Intent intent) {
+-        super.onNewIntent(intent);
+-    }
++//    @Override
++//    public void onNewIntent(@NonNull Intent intent) {
++//        super.onNewIntent(intent);
++//    }
+ 
+     private void invokeStartTask(ReactContext reactContext) {
+         try {
+@@ -120,12 +145,12 @@ public final class CarService extends CarAppService {
              }
  
              catalystInstance.getJSModule(AppRegistry.class).runApplication(jsAppModuleName, appParams);
@@ -3747,183 +3927,725 @@ index e912777..8b34474 100644
  
              AndroidAutoModule carModule = mReactInstanceManager
                      .getCurrentReactContext()
+                     .getNativeModule(AndroidAutoModule.class);
+-            carModule.setCarContext(getCarContext(), screen);
++//            carModule.setCarContext(getCarContext(), screen);
+ 
+             timingModule.onHostResume();
+         } finally {
 diff --git a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/TemplateParser.java b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/TemplateParser.java
-index e33c164..66380d9 100644
+index e33c164..e244788 100644
 --- a/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/TemplateParser.java
 +++ b/node_modules/react-native-android-auto/android/src/main/java/com/shopify/rnandroidauto/TemplateParser.java
-@@ -34,7 +34,7 @@ public class TemplateParser {
+@@ -1,5 +1,8 @@
+ package com.shopify.rnandroidauto;
+ 
++import static androidx.car.app.CarToast.LENGTH_LONG;
++import static androidx.car.app.model.Action.BACK;
++
+ import android.util.Log;
+ 
+ import androidx.annotation.NonNull;
+@@ -8,25 +11,38 @@ import com.facebook.react.bridge.NoSuchKeyException;
+ import com.facebook.react.bridge.ReadableArray;
+ import com.facebook.react.bridge.ReadableMap;
+ import com.facebook.react.bridge.WritableNativeMap;
+-import com.google.android.libraries.car.app.model.Action;
+-import com.google.android.libraries.car.app.model.ActionStrip;
+-import com.google.android.libraries.car.app.model.CarColor;
+-import com.google.android.libraries.car.app.model.ItemList;
+-import com.google.android.libraries.car.app.model.LatLng;
+-import com.google.android.libraries.car.app.model.ListTemplate;
+-import com.google.android.libraries.car.app.model.Metadata;
+-import com.google.android.libraries.car.app.model.Pane;
+-import com.google.android.libraries.car.app.model.PaneTemplate;
+-import com.google.android.libraries.car.app.model.Place;
+-import com.google.android.libraries.car.app.model.PlaceListMapTemplate;
+-import com.google.android.libraries.car.app.model.PlaceMarker;
+-import com.google.android.libraries.car.app.model.Row;
+-import com.google.android.libraries.car.app.model.Template;
++//import com.google.android.libraries.car.app.model.Action;
++//import com.google.android.libraries.car.app.model.ActionStrip;
++//import com.google.android.libraries.car.app.model.CarColor;
++//import com.google.android.libraries.car.app.model.ItemList;
++//import com.google.android.libraries.car.app.model.LatLng;
++//import com.google.android.libraries.car.app.model.ListTemplate;
++//import com.google.android.libraries.car.app.model.Metadata;
++//import com.google.android.libraries.car.app.model.Pane;
++//import com.google.android.libraries.car.app.model.PaneTemplate;
++//import com.google.android.libraries.car.app.model.Place;
++//import com.google.android.libraries.car.app.model.PlaceListMapTemplate;
++//import com.google.android.libraries.car.app.model.PlaceMarker;
++
++
++import androidx.car.app.model.Action;
++import androidx.car.app.model.ActionStrip;
++import androidx.car.app.model.CarColor;
++import androidx.car.app.model.ListTemplate;
++import androidx.car.app.model.Metadata;
++import androidx.car.app.model.Pane;
++import androidx.car.app.model.PaneTemplate;
++import androidx.car.app.model.Place;
++import androidx.car.app.model.PlaceListMapTemplate;
++import androidx.car.app.model.PlaceMarker;
++import androidx.car.app.model.ItemList;
++import androidx.car.app.model.Row;
++import androidx.car.app.model.Template;
+ 
+ import java.util.ArrayList;
+ 
+ public class TemplateParser {
+-    private ReactCarRenderContext mReactCarRenderContext;
++    private final ReactCarRenderContext mReactCarRenderContext;
+ 
+     TemplateParser(ReactCarRenderContext reactCarRenderContext) {
+         mReactCarRenderContext = reactCarRenderContext;
+@@ -34,312 +50,339 @@ public class TemplateParser {
  
      public Template parseTemplate(ReadableMap renderMap) {
          String type = renderMap.getString("type");
 -
-+        Log.d("TemplateParser", "parseTemplate: " + type);
-         switch (type) {
-             case "list-template":
-                 return parseListTemplateChildren(renderMap);
-@@ -45,7 +45,7 @@ public class TemplateParser {
-             default:
-                 return PaneTemplate.builder(
-                         Pane.builder().setIsLoading(true).build()
+-        switch (type) {
+-            case "list-template":
+-                return parseListTemplateChildren(renderMap);
+-            case "place-list-map-template":
+-                return parsePlaceListMapTemplate(renderMap);
+-            case "pane-template":
+-                return parsePaneTemplate(renderMap);
+-            default:
+-                return PaneTemplate.builder(
+-                        Pane.builder().setIsLoading(true).build()
 -                ).setTitle("Shopify Local Delivery").build();
-+                ).setTitle("Pane Template").build();
-         }
-     }
- 
-@@ -55,15 +55,15 @@ public class TemplateParser {
-         ReadableArray children = map.getArray("children");
- 
-         boolean loading;
+-        }
+-    }
 -
-+        Log.d("Children", "Children size" + children.size());
-         try {
-             loading = map.getBoolean("isLoading");
-+            Log.d("isLoading", ":" + loading);
-         } catch (NoSuchKeyException e) {
+-    private PaneTemplate parsePaneTemplate(ReadableMap map) {
+-        Pane.Builder paneBuilder = Pane.builder();
+-
+-        ReadableArray children = map.getArray("children");
+-
+-        boolean loading;
+-
+-        try {
+-            loading = map.getBoolean("isLoading");
+-        } catch (NoSuchKeyException e) {
 -            loading = children.size() == 0;
-+            loading = children == null || children.size() == 0;
-         }
- 
+-        }
+-
 -        paneBuilder.setIsLoading(false);
 -
-+        paneBuilder.setIsLoading(loading);
- 
-         ArrayList<Action> actions = new ArrayList();
- 
-@@ -71,6 +71,7 @@ public class TemplateParser {
-             for (int i = 0; i < children.size(); i++) {
-                 ReadableMap child = children.getMap(i);
-                 String type = child.getString("type");
-+		Log.d("AUTO", "Adding child to row");
- 
-                 if (type.equals("row")) {
-                     paneBuilder.addRow(buildRow(child));
-@@ -88,7 +89,15 @@ public class TemplateParser {
- 
-         PaneTemplate.Builder builder = PaneTemplate.builder(paneBuilder.build());
- 
+-
+-        ArrayList<Action> actions = new ArrayList();
+-
+-        if (!loading) {
+-            for (int i = 0; i < children.size(); i++) {
+-                ReadableMap child = children.getMap(i);
+-                String type = child.getString("type");
+-
+-                if (type.equals("row")) {
+-                    paneBuilder.addRow(buildRow(child));
+-                }
+-
+-                if (type.equals("action")) {
+-                    actions.add(parseAction(child));
+-                }
+-            }
+-
+-            if (actions.size() > 0) {
+-                paneBuilder.setActions(actions);
+-            }
+-        }
+-
+-        PaneTemplate.Builder builder = PaneTemplate.builder(paneBuilder.build());
+-
 -        builder.setTitle(map.getString("title"));
-+	String title = map.getString("title");
-+	if ( title == null || title.length() == 0 )
-+	{
-+        	builder.setTitle("<No Title>");
-+	}
-+	else
-+	{
-+        	builder.setTitle(title);
-+	}
- 
-         try {
-             builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
-@@ -108,6 +117,8 @@ public class TemplateParser {
-     private ActionStrip parseActionStrip(ReadableMap map) {
-         ActionStrip.Builder builder = ActionStrip.builder();
- 
-+	    if ( map != null )
-+	    {
-         ReadableArray actions = map.getArray("actions");
- 
-         for (int i = 0; i < actions.size(); i++) {
-@@ -115,13 +126,19 @@ public class TemplateParser {
-             Action action = parseAction(actionMap);
-             builder.addAction(action);
-         }
 -
-         return builder.build();
-+	    }
-+	    else
-+	    {
-+		    return null;
-+	    }
+-        try {
+-            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        try {
+-            ReadableMap actionStripMap = map.getMap("actionStrip");
+-            builder.setActionStrip(parseActionStrip(actionStripMap));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-
+-        return builder.build();
+-    }
+-
+-    private ActionStrip parseActionStrip(ReadableMap map) {
+-        ActionStrip.Builder builder = ActionStrip.builder();
+-
+-        ReadableArray actions = map.getArray("actions");
+-
+-        for (int i = 0; i < actions.size(); i++) {
+-            ReadableMap actionMap = actions.getMap(i);
+-            Action action = parseAction(actionMap);
+-            builder.addAction(action);
+-        }
+-
+-        return builder.build();
++        Pane.Builder paneBuilder = new Pane.Builder();
++        return new PaneTemplate.Builder(
++                paneBuilder.setLoading(true).build()
++        ).setTitle("Pane Template").build();
++//        switch (type) {
++//            case "list-template":
++//                return parseListTemplateChildren(renderMap);
++//            case "place-list-map-template":
++//                return parsePlaceListMapTemplate(renderMap);
++//            case "pane-template":
++//                return parsePaneTemplate(renderMap);
++//            default:
++//                return new PaneTemplate.Builder(
++//                        paneBuilder.setLoading(true).build()
++//                ).setTitle("Pane Template").build();
++//        }
      }
  
-     private Action parseAction(ReadableMap map) {
-         Action.Builder builder = Action.builder();
- 
-+	if ( map != null )
-+	{
-         builder.setTitle(map.getString("title"));
-         try {
-             builder.setBackgroundColor(getColor(map.getString("backgroundColor")));
-@@ -135,7 +152,9 @@ public class TemplateParser {
-                 invokeCallback(onPress);
-             });
-         } catch (NoSuchKeyException e) {
-+		Log.d("AUTO", "Couldn't parseAction", e);
-         }
-+	}
- 
-         return builder.build();
-     }
-@@ -177,9 +196,10 @@ public class TemplateParser {
-         try {
-             loading = map.getBoolean("isLoading");
-         } catch (NoSuchKeyException e) {
+-    private Action parseAction(ReadableMap map) {
+-        Action.Builder builder = Action.builder();
+-
+-        builder.setTitle(map.getString("title"));
+-        try {
+-            builder.setBackgroundColor(getColor(map.getString("backgroundColor")));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        try {
+-            int onPress = map.getInt("onPress");
+-
+-            builder.setOnClickListener(() -> {
+-                invokeCallback(onPress);
+-            });
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        return builder.build();
+-    }
+-
+-    private CarColor getColor(String colorName) {
+-        switch (colorName) {
+-            case "blue":
+-                return CarColor.BLUE;
+-            case "green":
+-                return CarColor.GREEN;
+-            case "primary":
+-                return CarColor.PRIMARY;
+-            case "red":
+-                return CarColor.RED;
+-            case "secondary":
+-                return CarColor.SECONDARY;
+-            case "yellow":
+-                return CarColor.YELLOW;
+-            default:
+-            case "default":
+-                return CarColor.DEFAULT;
+-        }
+-    }
+-
+-    private PlaceListMapTemplate parsePlaceListMapTemplate(ReadableMap map) {
+-        PlaceListMapTemplate.Builder builder = PlaceListMapTemplate.builder();
+-
+-        builder.setTitle(map.getString("title"));
+-        ReadableArray children = map.getArray("children");
+-
+-
+-        try {
+-            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        boolean loading;
+-
+-        try {
+-            loading = map.getBoolean("isLoading");
+-        } catch (NoSuchKeyException e) {
 -            loading = children.size() == 0;
-+            loading = children == null || children.size() == 0;
-         }
- 
-+	Log.d("AUTO", "Rendering " + (loading ? "Yes" : "No"));
-         builder.setIsLoading(loading);
- 
-         if (!loading) {
-@@ -188,6 +208,7 @@ public class TemplateParser {
-             for (int i = 0; i < children.size(); i++) {
-                 ReadableMap child = children.getMap(i);
-                 String type = child.getString("type");
-+                Log.d("AUTO", "Adding " + type + " to row");
- 
-                 if (type.equals("row")) {
-                     itemListBuilder.addItem(buildRow(child));
-@@ -208,6 +229,7 @@ public class TemplateParser {
-     }
- 
-     private ListTemplate parseListTemplateChildren(ReadableMap map) {
-+        Log.d("Rendering ListTemple", "test");
-         ReadableArray children = map.getArray("children");
- 
-         ListTemplate.Builder builder = ListTemplate.builder();
-@@ -219,9 +241,9 @@ public class TemplateParser {
-         } catch (NoSuchKeyException e) {
-             loading = children.size() == 0;
-         }
+-        }
 -
-+        Log.d("ListTemplate loading", ":" + loading);
-         builder.setIsLoading(loading);
+-        builder.setIsLoading(loading);
 -
-+        Log.d("ListTemplate loading", "children size" + children.size());
-         if (!loading) {
-             for (int i = 0; i < children.size(); i++) {
-                 ReadableMap child = children.getMap(i);
-@@ -295,7 +317,7 @@ public class TemplateParser {
-         }
- 
-         try {
+-        if (!loading) {
+-            ItemList.Builder itemListBuilder = ItemList.builder();
+-
+-            for (int i = 0; i < children.size(); i++) {
+-                ReadableMap child = children.getMap(i);
+-                String type = child.getString("type");
+-
+-                if (type.equals("row")) {
+-                    itemListBuilder.addItem(buildRow(child));
+-                }
+-            }
+-
+-            builder.setItemList(itemListBuilder.build());
+-        }
+-
+-
+-        try {
+-            ReadableMap actionStripMap = map.getMap("actionStrip");
+-            builder.setActionStrip(parseActionStrip(actionStripMap));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        return builder.build();
+-    }
+-
+-    private ListTemplate parseListTemplateChildren(ReadableMap map) {
+-        ReadableArray children = map.getArray("children");
+-
+-        ListTemplate.Builder builder = ListTemplate.builder();
+-
+-        boolean loading;
+-
+-        try {
+-            loading = map.getBoolean("isLoading");
+-        } catch (NoSuchKeyException e) {
+-            loading = children.size() == 0;
+-        }
+-
+-        builder.setIsLoading(loading);
+-
+-        if (!loading) {
+-            for (int i = 0; i < children.size(); i++) {
+-                ReadableMap child = children.getMap(i);
+-                String type = child.getString("type");
+-                if (type.equals("item-list")) {
+-                    builder.addList(parseItemListChildren(child), child.getString("header"));
+-                }
+-            }
+-        }
+-
+-        try {
+-            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        try {
+-            ReadableMap actionStripMap = map.getMap("actionStrip");
+-            builder.setActionStrip(parseActionStrip(actionStripMap));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        builder.setTitle(map.getString("title"));
+-
+-        return builder.build();
+-    }
+-
+-    private ItemList parseItemListChildren(ReadableMap itemList) {
+-        ReadableArray children = itemList.getArray("children");
+-        ItemList.Builder builder = ItemList.builder();
+-
+-        for (int i = 0; i < children.size(); i++) {
+-            ReadableMap child = children.getMap(i);
+-            String type = child.getString("type");
+-            if (type.equals("row")) {
+-                builder.addItem(buildRow(child));
+-            }
+-        }
+-
+-        try {
+-            builder.setNoItemsMessage(itemList.getString("noItemsMessage"));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        return builder.build();
+-    }
+-
+-    @NonNull
+-    private Row buildRow(ReadableMap rowRenderMap) {
+-        Row.Builder builder = Row.builder();
+-
+-        builder.setTitle(rowRenderMap.getString("title"));
+-
+-        try {
+-            ReadableArray texts = rowRenderMap.getArray("texts");
+-
+-            for (int i = 0; i < texts.size(); i++) {
+-                builder.addText(texts.getString(i));
+-            }
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        try {
+-            int onPress = rowRenderMap.getInt("onPress");
+-
+-            builder.setIsBrowsable(true);
+-
+-            builder.setOnClickListener(() -> {
+-                invokeCallback(onPress);
+-            });
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        try {
 -            builder.setMetadata(parseMetaData(rowRenderMap.getMap("metadata")));
+-        } catch (NoSuchKeyException e) {
+-        }
+-
+-        return builder.build();
+-    }
+-
+-    private Metadata parseMetaData(ReadableMap map) {
+-        switch (map.getString("type")) {
+-            case "place":
+-                return Metadata
+-                        .ofPlace(
+-                                Place
+-                                        .builder(LatLng.create(map.getDouble("latitude"), map.getDouble("longitude")))
+-                                        .setMarker(PlaceMarker.getDefault())
+-                                        .build()
+-                        );
+-            default:
+-                return null;
+-        }
+-    }
+-
+-    private Action getHeaderAction(String actionName) {
+-        switch (actionName) {
+-            case "back":
+-                return Action.BACK;
+-            case "app_icon":
+-                return Action.APP_ICON;
+-            default:
+-                return null;
+-        }
+-    }
+-
+-    private void invokeCallback(int callbackId) {
+-        invokeCallback(callbackId, null);
+-    }
+-
+-    private void invokeCallback(int callbackId, WritableNativeMap params) {
+-        if (params == null) {
+-            params = new WritableNativeMap();
+-        }
+-
+-        params.putInt("id", callbackId);
+-        params.putString("screen", mReactCarRenderContext.getScreenMarker());
+-
+-        mReactCarRenderContext.getEventCallback().invoke(params);
+-    }
++//    private PaneTemplate parsePaneTemplate(ReadableMap map) {
++//        Pane.Builder paneBuilder = new Pane.Builder();
++//
++//        ReadableArray children = map.getArray("children");
++//
++//        boolean loading;
++//
++//        try {
++//            loading = map.getBoolean("isLoading");
++//            Log.d("isLoading", ":" + loading);
++//        } catch (NoSuchKeyException e) {
++//            loading = children == null || children.size() == 0;
++//        }
++//
++//        paneBuilder.setLoading(loading);
++//
++//        ArrayList<Action> actions = new ArrayList();
++//
++//        if (!loading) {
++//            for (int i = 0; i < children.size(); i++) {
++//                ReadableMap child = children.getMap(i);
++//                String type = child.getString("type");
++//                Log.d("AUTO", "Adding child to row");
++//
++//                if (type.equals("row")) {
++//                    paneBuilder.addRow(buildRow(child));
++//                }
++//
++//                if (type.equals("action")) {
++//                    actions.add(parseAction(child));
++//                }
++//            }
++//
++//            if (actions.size() > 0) {
++//                for (int i = 0; i < actions.size(); i++) {
++//                    paneBuilder.addAction(actions.get(i));
++//                }
++//
++//            }
++//        }
++//
++//        PaneTemplate.Builder builder = new PaneTemplate.Builder(paneBuilder.build());
++//
++//        String title = map.getString("title");
++//        if (title == null || title.length() == 0) {
++//            builder.setTitle("<No Title>");
++//        } else {
++//            builder.setTitle(title);
++//        }
++//
++//        try {
++//            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        try {
++//            ReadableMap actionStripMap = map.getMap("actionStrip");
++//            builder.setActionStrip(parseActionStrip(actionStripMap));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//
++//        return builder.build();
++//    }
++
++//    private ActionStrip parseActionStrip(ReadableMap map) {
++//        ActionStrip.Builder builder = new ActionStrip.Builder();
++//
++//        if (map != null) {
++//            ReadableArray actions = map.getArray("actions");
++//
++//            for (int i = 0; i < actions.size(); i++) {
++//                ReadableMap actionMap = actions.getMap(i);
++//                Action action = parseAction(actionMap);
++//                builder.addAction(action);
++//            }
++//            return builder.build();
++//        } else {
++//            return null;
++//        }
++//    }
++
++//    private Action parseAction(ReadableMap map) {
++//        Action.Builder builder = new Action.Builder();
++//
++//        if (map != null) {
++//            builder.setTitle(map.getString("title"));
++//            try {
++//                builder.setBackgroundColor(getColor(map.getString("backgroundColor")));
++//            } catch (NoSuchKeyException e) {
++//            }
++//
++//            try {
++//                int onPress = map.getInt("onPress");
++//
++//                builder.setOnClickListener(() -> {
++//                    invokeCallback(onPress);
++//                });
++//            } catch (NoSuchKeyException e) {
++//                Log.d("AUTO", "Couldn't parseAction", e);
++//            }
++//        }
++//
++//        return builder.build();
++//    }
++
++//    private CarColor getColor(String colorName) {
++//        switch (colorName) {
++//            case "blue":
++//                return CarColor.BLUE;
++//            case "green":
++//                return CarColor.GREEN;
++//            case "primary":
++//                return CarColor.PRIMARY;
++//            case "red":
++//                return CarColor.RED;
++//            case "secondary":
++//                return CarColor.SECONDARY;
++//            case "yellow":
++//                return CarColor.YELLOW;
++//            default:
++//            case "default":
++//                return CarColor.DEFAULT;
++//        }
++//    }
++
++//    private PlaceListMapTemplate parsePlaceListMapTemplate(ReadableMap map) {
++//        PlaceListMapTemplate.Builder builder = new PlaceListMapTemplate.Builder();
++//
++//        builder.setTitle(map.getString("title"));
++//        ReadableArray children = map.getArray("children");
++//
++//
++//        try {
++//            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
++//        } catch (NoSuchKeyException e) {
++//            Log.d("HeaderAction", "error " + e);
++//        }
++//
++//        boolean loading;
++//
++//        try {
++//            loading = map.getBoolean("isLoading");
++//        } catch (NoSuchKeyException e) {
++//            loading = children == null || children.size() == 0;
++//        }
++//
++//        Log.d("AUTO", "Rendering " + (loading ? "Yes" : "No"));
++//        builder.setLoading(loading);
++//
++//        if (!loading) {
++//            ItemList.Builder itemListBuilder = new ItemList.Builder();
++//
++//            for (int i = 0; i < children.size(); i++) {
++//                ReadableMap child = children.getMap(i);
++//                String type = child.getString("type");
++//                Log.d("AUTO", "Adding " + type + " to row");
++//
++//                if (type.equals("row")) {
++//                    itemListBuilder.addItem(buildRow(child));
++//                }
++//            }
++//
++//            builder.setItemList(itemListBuilder.build());
++//        }
++//
++//
++//        try {
++//            ReadableMap actionStripMap = map.getMap("actionStrip");
++//            builder.setActionStrip(parseActionStrip(actionStripMap));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        return builder.build();
++//    }
++
++//    private ListTemplate parseListTemplateChildren(ReadableMap map) {
++//        Log.d("Rendering ListTemple", "test");
++//        ReadableArray children = map.getArray("children");
++//        ListTemplate.Builder builder = new ListTemplate.Builder();
++//
++//        boolean loading;
++//
++//        try {
++//            loading = map.getBoolean("isLoading");
++//        } catch (NoSuchKeyException e) {
++//            loading = children.size() == 0;
++//        }
++//        Log.d("ListTemplate loading", ":" + loading);
++//        builder.setLoading(loading);
++//        Log.d("ListTemplate loading", "children size" + children.size());
++//        if (!loading) {
++//            for (int i = 0; i < children.size(); i++) {
++//                ReadableMap child = children.getMap(i);
++//                String type = child.getString("type");
++//                if (type.equals("item-list")) {
++//                 builder.addSectionedList(parseItemListChildren(child), child.getString("header"));
++//
++//                }
++//            }
++//        }
++//
++//        try {
++//            builder.setHeaderAction(getHeaderAction(map.getString("headerAction")));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        try {
++//            ReadableMap actionStripMap = map.getMap("actionStrip");
++//            builder.setActionStrip(parseActionStrip(actionStripMap));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        builder.setTitle(map.getString("title"));
++//
++//        return builder.build();
++//    }
++
++//    private ItemList parseItemListChildren(ReadableMap itemList) {
++//        ReadableArray children = itemList.getArray("children");
++//        ItemList.Builder builder = new ItemList.Builder();
++//
++//
++//        for (int i = 0; i < children.size(); i++) {
++//            ReadableMap child = children.getMap(i);
++//            String type = child.getString("type");
++//            if (type.equals("row")) {
++//                builder.addItem(buildRow(child));
++//            }
++//        }
++//
++//        try {
++//            builder.setNoItemsMessage(itemList.getString("noItemsMessage"));
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        return builder.build();
++//    }
++
++//    @NonNull
++//    private Row buildRow(ReadableMap rowRenderMap) {
++//        Row.Builder builder = new Row.Builder();
++//
++//        builder.setTitle(rowRenderMap.getString("title"));
++//
++//        try {
++//            ReadableArray texts = rowRenderMap.getArray("texts");
++//
++//            for (int i = 0; i < texts.size(); i++) {
++//                builder.addText(texts.getString(i));
++//            }
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        try {
++//            int onPress = rowRenderMap.getInt("onPress");
++//            builder.setBrowsable(true);
++//
++//            builder.setOnClickListener(() -> {
++//                invokeCallback(onPress);
++//            });
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        try {
 +//            builder.setMetadata(parseMetaData(rowRenderMap.getMap("metadata")));
-         } catch (NoSuchKeyException e) {
-         }
- 
-@@ -318,6 +340,12 @@ public class TemplateParser {
-     }
- 
-     private Action getHeaderAction(String actionName) {
-+	    if ( actionName == null )
-+	    {
-+		    return null;
-+	    }
-+	    else
-+	    {
-         switch (actionName) {
-             case "back":
-                 return Action.BACK;
-@@ -326,6 +354,7 @@ public class TemplateParser {
-             default:
-                 return null;
-         }
-+	    }
-     }
- 
-     private void invokeCallback(int callbackId) {
++//        } catch (NoSuchKeyException e) {
++//        }
++//
++//        return builder.build();
++//    }
++
++//    private Metadata parseMetaData(ReadableMap map) {
++//        switch (map.getString("type")) {
++//            case "place":
++//                return Metadata
++//                        .ofPlace(
++//                                Place
++//                                        .builder(LatLng.create(map.getDouble("latitude"), map.getDouble("longitude")))
++//                                        .setMarker(PlaceMarker.getDefault())
++//                                        .build()
++//                        );
++//            default:
++//                return null;
++//
++//        }
++//    }
++
++//    private Action getHeaderAction(String actionName) {
++//        if (actionName == null) {
++//            return null;
++//        } else {
++//            switch (actionName) {
++//                case "back":
++//                    return Action.BACK;
++//                case "app_icon":
++//                    return Action.APP_ICON;
++//                default:
++//                    return null;
++//            }
++//        }
++//    }
++
++//    private void invokeCallback(int callbackId) {
++//        invokeCallback(callbackId, null);
++//    }
++//
++//    private void invokeCallback(int callbackId, WritableNativeMap params) {
++//        if (params == null) {
++//            params = new WritableNativeMap();
++//        }
++//
++//        params.putInt("id", callbackId);
++//        params.putString("screen", mReactCarRenderContext.getScreenMarker());
++//
++//        mReactCarRenderContext.getEventCallback().invoke(params);
++//    }
+ }
 diff --git a/node_modules/react-native-android-auto/index.js b/node_modules/react-native-android-auto/index.js
 deleted file mode 100644
 index b74e5d5..0000000
@@ -4477,7 +5199,7 @@ index 0000000..067d0b6
 \ No newline at end of file
 diff --git a/node_modules/react-native-android-auto/src/android-auto.global.ts b/node_modules/react-native-android-auto/src/android-auto.global.ts
 new file mode 100644
-index 0000000..c0bb3cc
+index 0000000..34c1083
 --- /dev/null
 +++ b/node_modules/react-native-android-auto/src/android-auto.global.ts
 @@ -0,0 +1,26 @@
@@ -4496,12 +5218,12 @@ index 0000000..c0bb3cc
 +  // eslint-disable-next-line @typescript-eslint/no-namespace
 +  namespace JSX {
 +    interface IntrinsicElements {
-+      "list-template": NativeToJSXElement<"list-template">;
-+      "item-list": NativeToJSXElement<"item-list">;
-+      "place-list-map-template": NativeToJSXElement<"place-list-map-template">;
-+      action: NativeToJSXElement<"action">;
++      // "list-template": NativeToJSXElement<"list-template">;
++      // "item-list": NativeToJSXElement<"item-list">;
++      // "place-list-map-template": NativeToJSXElement<"place-list-map-template">;
++      // action: NativeToJSXElement<"action">;
 +      "pane-template": NativeToJSXElement<"pane-template">;
-+      row: NativeToJSXElement<"row">;
++      // row: NativeToJSXElement<"row">;
 +    }
 +  }
 +}

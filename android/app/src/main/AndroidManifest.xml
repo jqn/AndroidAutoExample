@@ -24,12 +24,14 @@
       <meta-data
         android:name="com.google.android.gms.car.application"
         android:resource="@xml/automotive_app_desc" />
-
+      <meta-data 
+        android:name="androidx.car.app.minCarApiLevel"
+        android:value="1" />
       <service
           android:name="com.shopify.rnandroidauto.CarService"
           android:exported="true">
           <intent-filter>
-            <action android:name="com.google.android.car.action.CAR_APP" />
+              <action android:name="androidx.car.app.CarAppService" />
           </intent-filter>
       </service>
     </application>

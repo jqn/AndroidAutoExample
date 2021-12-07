@@ -19,21 +19,27 @@ const DeliveryListScreen = () => {
   );
 };
 
+// const Main = () => {
+//   return (
+//     <list-template
+//       title={'Shopify Local Delivery test update'}
+//       isLoading={false}>
+//       <item-list header="Delivery Lists">
+//         <row key={1} title={"Today's Delivery"} texts={['Delivery 1']} />
+//       </item-list>
+//     </list-template>
+//   );
+// };
+
 const Main = () => {
-  return (
-    <list-template title={'Shopify Local Delivery test'} isLoading={false}>
-      <item-list header="Delivery Lists">
-        <row key={1} title={"Today's Delivery"} texts={['Delivery 1']} />
-      </item-list>
-    </list-template>
-  );
+  return <pane-template title={'Shopify Local Delivery'} />;
 };
 
 const RootApp = () => {
   return (
     <ScreenManager>
-      <Screen name="root" render={Main} />
-      <Screen name="deliveryList" render={DeliveryListScreen} />
+      {/* <Screen name="root" render={Main} /> */}
+      {/* <Screen name="deliveryList" render={DeliveryListScreen} /> */}
     </ScreenManager>
   );
 };
